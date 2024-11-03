@@ -358,3 +358,56 @@ cache.set('my_key', 'my_value', timeout=60)
 value = cache.get('my_key')
 
 ```
+
+### 12.  database Association
+# A one-to-one association in Django is created using the OneToOneField.
+
+```
+# models.py
+from django.db import models
+from django.contrib.auth.models import User
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField()
+
+# Creating records
+user = User.objects.create(username='Alice')
+profile = Profile.objects.create(user=user, bio='Hello!')
+
+```
+# In Django, a one-to-many relationship is represented using a ForeignKey.
+
+```
+# models.py
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    content = models.TextField()
+
+# Creating records
+post = Post.objects.create(title='My First Post')
+Comment.objects.create(post=post, content='Great post!')
+
+```
+
+# A many-to-many association means that records in one table can be associated with multiple records in another table and vice versa.
+A Student can enroll in many Courses, and a Course can have many Students.
+
+```
+# models.py
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+
+class Course(models.Model):
+    title = models.CharField(max_length=100)
+    students = models.ManyToManyField(Student, related_name='courses')
+
+# Creating records
+student = Student.objects.create(name='Alice')
+course = Course.objects.create(title='Math 101')
+course.students.add(student)
+
+```

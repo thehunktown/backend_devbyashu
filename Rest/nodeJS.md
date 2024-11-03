@@ -591,3 +591,81 @@ Delete Cache:
 ```
 cache.del('user_1');
 ```
+
+### 12. Database Associations
+# A one-to-one association means that a record in one table is linked to a single record in another table.
+An example would be a User and a Profile, where each user has exactly one profile.
+```
+// User.js (Model)
+const User = sequelize.define('User', {
+    name: DataTypes.STRING,
+});
+
+// Profile.js (Model)
+const Profile = sequelize.define('Profile', {
+    bio: DataTypes.STRING,
+});
+
+// Association
+User.hasOne(Profile);
+Profile.belongsTo(User);
+
+// Creating records
+const user = await User.create({ name: 'Alice' });
+const profile = await Profile.create({ bio: 'Hello!' });
+await user.setProfile(profile);
+
+```
+# In a one-to-many association, a record in one table can be associated with multiple records in another table.
+A Post can have many Comments.
+```
+// Post.js (Model)
+const Post = sequelize.define('Post', {
+    title: DataTypes.STRING,
+});
+
+// Comment.js (Model)
+const Comment = sequelize.define('Comment', {
+    content: DataTypes.STRING,
+});
+
+// Association
+Post.hasMany(Comment);
+Comment.belongsTo(Post);
+
+// Creating records
+const post = await Post.create({ title: 'My First Post' });
+await Comment.create({ content: 'Great post!', postId: post.id });
+
+ ```
+
+ # A many-to-many association means that records in one table can be associated with multiple records in another table and vice versa.
+A Student can enroll in many Courses, and a Course can have many Students.
+```
+// Student.js (Model)
+const Student = sequelize.define('Student', {
+    name: DataTypes.STRING,
+});
+
+// Course.js (Model)
+const Course = sequelize.define('Course', {
+    title: DataTypes.STRING,
+});
+
+// Association
+Student.belongsToMany(Course, { through: 'StudentCourses' });
+Course.belongsToMany(Student, { through: 'StudentCourses' });
+
+// Creating records
+const student = await Student.create({ name: 'Alice' });
+const course = await Course.create({ title: 'Math 101' });
+await student.addCourse(course);
+
+```
+### 13. Validations
+
+### 14. Hooks/Callbacks
+
+### 15. Seeding
+
+### 16. Pagination and Filtering
