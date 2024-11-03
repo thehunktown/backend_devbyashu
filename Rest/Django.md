@@ -411,3 +411,19 @@ course = Course.objects.create(title='Math 101')
 course.students.add(student)
 
 ```
+
+### 13. Pagination and filtering
+In Django, filtering can be done using the filter() method on querysets.
+```
+def user_list(request):
+    name_filter = request.GET.get('name', '')
+    user_list = User.objects.filter(name__icontains=name_filter)  # Case-insensitive search
+
+    paginator = Paginator(user_list, 10) // pagination
+    page_number = request.GET.get('page')
+    users = paginator.get_page(page_number)
+
+    return render(request, 'user_list.html', {'users': users})
+
+
+```
