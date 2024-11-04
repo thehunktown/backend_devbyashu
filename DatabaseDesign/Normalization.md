@@ -1,6 +1,48 @@
 
 # Database Design Notes
 
+## Duplicacy in Databases
+
+### Problem
+Duplicacy in databases can lead to inefficiencies and data integrity issues. Duplicacy may occur at:
+- **Row Level Duplicacy**: Entire rows of data are repeated, leading to redundant entries.
+- **Column Level Duplicacy**: Information is stored in multiple columns unnecessarily, which can result in redundancy and increased storage requirements.
+
+These duplicacies cause issues known as:
+- **Insertion Anomaly**: Problems arise when adding new data due to duplicacy or unnecessary dependencies.
+- **Deletion Anomaly**: Unintended data loss occurs when deleting data from a table.
+- **Update Anomaly**: Updating duplicated data becomes difficult as it requires multiple updates across the database.
+
+### Examples of Anomalies
+
+#### Insertion Anomaly
+Consider a `Students` table with columns `Student_ID`, `Student_Name`, and `Course`. If a new course must be added but there is no student enrolled yet, an `Insertion Anomaly` occurs as we may need to leave certain fields empty or create incomplete entries.
+
+| Student_ID | Student_Name | Course     |
+|------------|--------------|------------|
+| 1          | Raj          | Math       |
+| 2          | Priya        | Science    |
+| NULL       | NULL         | History    |  ← Issue: no student for History course
+
+#### Deletion Anomaly
+If a student `Priya` (Student_ID = 2) is deleted from the table, we lose information about her `Science` course as well. Thus, deletion of one data point inadvertently deletes related information, leading to `Deletion Anomaly`.
+
+| Student_ID | Student_Name | Course     |
+|------------|--------------|------------|
+| 1          | Raj          | Math       |
+| 2          | Priya        | Science    | ← If deleted, information about Science course is lost
+
+#### Update Anomaly
+In a table where a teacher’s name is stored multiple times (one entry per course), changing the teacher’s name for one course doesn’t reflect in all entries, leading to inconsistent data. For example, changing `Mr. Sharma` to `Dr. Sharma` would require multiple updates.
+
+| Course_ID | Course_Name | Teacher     |
+|-----------|-------------|-------------|
+| 101       | Math        | Mr. Sharma  |
+| 102       | Science     | Mr. Sharma  | ← Needs update to Dr. Sharma
+| 103       | English     | Ms. Kapoor  |
+
+---
+
 ## 1st Normal Form (1NF)
 
 ### Problem
