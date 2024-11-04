@@ -8,7 +8,7 @@ Duplicacy in databases can lead to inefficiencies and data integrity issues. Dup
 - **Row Level Duplicacy**: Entire rows of data are repeated, leading to redundant entries.
 - **Column Level Duplicacy**: Information is stored in multiple columns unnecessarily, which can result in redundancy and increased storage requirements.
 
-These duplicacies cause issues known as:
+These column level duplicacies cause issues known as:
 - **Insertion Anomaly**: Problems arise when adding new data due to duplicacy or unnecessary dependencies.
 - **Deletion Anomaly**: Unintended data loss occurs when deleting data from a table.
 - **Update Anomaly**: Updating duplicated data becomes difficult as it requires multiple updates across the database.
