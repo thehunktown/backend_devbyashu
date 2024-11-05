@@ -1,6 +1,4 @@
 /*
-1. binary number conversion, with 1's and 2's compliment
-2. operators (AND, OR, XOR, NOT, SWIFT)
 3. swap 2 numbers
 4. check if ith bit is set or not?
 5. extract the ith bit
@@ -12,5 +10,9 @@
 11. check if number is a power of 2 or not
 12. minimum bit flip to convert a number
 13. power set (print all subset)
-14. 
+14. single number 1: In a given array, every element appears exactly twice, except for one element that appears only once. Find the element that appears only once.
+15. single nimber 2: In a given array, every element appears exactly thrice, except for one element that appears only once. Find the element that appears only once.
+16. single number 3: In a given array, every element appears exactly twice, but two distinct number is appearing once
+17. XOR of  numbers in given range
+18. divide two integers without using division operators  
 */
