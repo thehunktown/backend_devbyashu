@@ -1,6 +1,4 @@
-<!-- indexing -->
-<!-- hashing -->
-<!-- indexing implementation in django -->
+
 # Database Indexing Types and Implementation in Django
 
 In databases, indexes are data structures that improve the speed of data retrieval operations. By organizing data in specific ways, indexes can help reduce the time it takes to find specific rows, especially in large tables. In Django, you can create various types of indexes to optimize database performance for specific queries. Here’s a comprehensive list of indexing types commonly used in industry-standard implementations and how you can implement each in Django.
