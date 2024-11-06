@@ -1,0 +1,302 @@
+# SQL Questions
+
+## Easy
+
+- 175. Combine Two Tables
+- 181. Employees Earning More Than Their Managers
+- 182. Duplicate Emails
+- 183. Customers Who Never Order
+- 196. Delete Duplicate Emails
+- 197. Rising Temperature
+- 511. Game Play Analysis I
+- 512. Game Play Analysis II
+- 577. Employee Bonus
+- 584. Find Customer Referee
+- 586. Customer Placing the Largest Number of Orders
+- 595. Big Countries
+- 596. Classes More Than 5 Students
+- 597. Friend Requests I: Overall Acceptance Rate
+- 603. Consecutive Available Seats
+- 607. Sales Person
+- 610. Triangle Judgement
+- 613. Shortest Distance in a Line
+- 619. Biggest Single Number
+- 620. Not Boring Movies
+- 627. Swap Salary
+- 1050. Actors and Directors Who Cooperated At Least Three Times
+- 1068. Product Sales Analysis I
+- 1069. Product Sales Analysis II
+- 1075. Project Employees I
+- 1076. Project Employees II
+- 1082. Sales Analysis I
+- 1083. Sales Analysis II
+- 1084. Sales Analysis III
+- 1113. Reported Posts
+- 1141. User Activity for the Past 30 Days I
+- 1142. User Activity for the Past 30 Days II
+- 1148. Article Views I
+- 1173. Immediate Food Delivery I
+- 1179. Reformat Department Table
+- 1211. Queries Quality and Percentage
+- 1241. Number of Comments per Post
+- 1251. Average Selling Price
+- 1280. Students and Examinations
+- 1294. Weather Type in Each Country
+- 1303. Find the Team Size
+- 1322. Ads Performance
+- 1327. List the Products Ordered in a Period
+- 1350. Students With Invalid Departments
+- 1378. Replace Employee ID With The Unique Identifier
+- 1407. Top Travellers
+- 1421. NPV Queries
+- 1435. Create a Session Bar Chart
+- 1484. Group Sold Products By The Date
+- 1495. Friendly Movies Streamed Last Month
+- 1511. Customer Order Frequency
+- 1517. Find Users With Valid E-Mails
+- 1527. Patients With a Condition
+- 1543. Fix Product Name Format
+- 1565. Unique Orders and Customers Per Month
+- 1571. Warehouse Manager
+- 1581. Customer Who Visited but Did Not Make Any Transactions
+- 1587. Bank Account Summary II
+- 1607. Sellers With No Sales
+- 1623. All Valid Triplets That Can Represent a Country
+- 1633. Percentage of Users Attended a Contest
+- 1661. Average Time of Process per Machine
+- 1667. Fix Names in a Table
+- 1677. Product's Worth Over Invoices
+- 1683. Invalid Tweets
+- 1693. Daily Leads and Partners
+- 1729. Find Followers Count
+- 1731. The Number of Employees Which Report to Each Employee
+- 1741. Find Total Time Spent by Each Employee
+- 1757. Recyclable and Low Fat Products
+- 1777. Product's Price for Each Store
+- 1789. Primary Department for Each Employee
+- 1795. Rearrange Products Table
+- 1809. Ad-Free Sessions
+- 1821. Find Customers With Positive Revenue this Year
+- 1853. Convert Date Format
+- 1873. Calculate Special Bonus
+- 1890. The Latest Login in 2020
+- 1939. Users That Actively Request Confirmation Messages
+- 1965. Employees With Missing Information
+- 1978. Employees Whose Manager Left the Company
+- 2026. Low-Quality Problems
+- 2072. The Winner University
+- 2082. The Number of Rich Customers
+- 2205. The Number of Users That Are Eligible for Discount
+- 2230. The Users That Are Eligible for Discount
+- 2329. Product Sales Analysis V
+- 2339. All the Matches of the League
+- 2356. Number of Unique Subjects Taught by Each Teacher
+- 2377. Sort the Olympic Table
+- 2480. Form a Chemical Bond
+- 2504. Concatenate the Name and the Profession
+- 2668. Find Latest Salaries
+- 2669. Count Artist Occurrences On Spotify Ranking List
+- 2687. Bikes Last Time Used
+- 2837. Total Traveled Distance
+- 2853. Highest Salaries Difference
+- 2985. Calculate Compressed Mean
+- 2987. Find Expensive Cities
+- 2990. Loan Types
+- 3051. Find Candidates for Data Scientist Position
+- 3053. Classifying Triangles by Lengths
+- 3059. Find All Unique Email Domains
+- 3150. Invalid Tweets II
+- 3172. Second Day Verification
+- 3198. Find Cities in Each State
+- 3246. Premier League Table Ranking
+
+## Medium
+
+- 3011. Find if Array Can Be Sorted
+- 176. Second Highest Salary
+- 177. Nth Highest Salary
+- 178. Rank Scores
+- 180. Consecutive Numbers
+- 184. Department Highest Salary
+- 534. Game Play Analysis III
+- 550. Game Play Analysis IV
+- 570. Managers with at Least 5 Direct Reports
+- 574. Winning Candidate
+- 578. Get Highest Answer Rate Question
+- 580. Count Student Number in Departments
+- 585. Investments in 2016
+- 602. Friend Requests II: Who Has the Most Friends
+- 608. Tree Node
+- 612. Shortest Distance in a Plane
+- 614. Second Degree Follower
+- 626. Exchange Seats
+- 1045. Customers Who Bought All Products
+- 1070. Product Sales Analysis III
+- 1077. Project Employees III
+- 1098. Unpopular Books
+- 1107. New Users Daily Count
+- 1112. Highest Grade For Each Student
+- 1126. Active Businesses
+- 1132. Reported Posts II
+- 1149. Article Views II
+- 1158. Market Analysis I
+- 1164. Product Price at a Given Date
+- 1174. Immediate Food Delivery II
+- 1193. Monthly Transactions I
+- 1204. Last Person to Fit in the Bus
+- 1205. Monthly Transactions II
+- 1212. Team Scores in Football Tournament
+- 1264. Page Recommendations
+- 1270. All People Report to the Given Manager
+- 1285. Find the Start and End Number of Continuous Ranges
+- 1308. Running Total for Different Genders
+- 1321. Restaurant Growth
+- 1341. Movie Rating
+- 1355. Activity Participants
+- 1364. Number of Trusted Contacts of a Customer
+- 1393. Capital Gain/Loss
+- 1398. Customers Who Bought Products A and B but Not C
+- 1440. Evaluate Boolean Expression
+- 1445. Apples & Oranges
+- 1454. Active Users
+- 1459. Rectangles Area
+- 1468. Calculate Salaries
+- 1501. Countries You Can Safely Invest In
+- 1532. The Most Recent Three Orders
+- 1549. The Most Recent Orders for Each Product
+- 1555. Bank Account Summary
+- 1596. The Most Frequently Ordered Products for Each Customer
+- 1613. Find the Missing IDs
+- 1699. Number of Calls Between Two Persons
+- 1709. Biggest Window Between Visits
+- 1715. Count Apples and Oranges
+- 1747. Leetflex Banned Accounts
+- 1783. Grand Slam Titles
+- 1811. Find Interview Candidates
+- 1831. Maximum Transaction Each Day
+- 1841. League Statistics
+- 1843. Suspicious Bank Accounts
+- 1867. Orders With Maximum Quantity Above Average
+- 1875. Group Employees of the Same Salary
+- 1907. Count Salary Categories
+- 1934. Confirmation Rate
+- 1949. Strong Friendship
+- 1951. All the Pairs With the Maximum Number of Common Followers
+- 1988. Find Cutoff Score for Each School
+- 1990. Count the Number of Experiments
+- 2020. Number of Accounts That Did Not Stream
+- 2041. Accepted Candidates From the Interviews
+- 2051. The Category of Each Member in the Store
+- 2066. Account Balance
+- 2084. Drop Type 1 Orders for Customers With Type 0 Orders
+- 2112. The Airport With the Most Traffic
+- 2142. The Number of Passengers in Each Bus I
+- 2159. Order Two Columns Independently
+- 2175. The Change in Global Rankings
+- 2228. Users With Two Purchases Within Seven Days
+- 2238. Number of Times a Driver Was a Passenger
+- 2292. Products With Three or More Orders in Two Consecutive Years
+- 2298. Tasks Count in the Weekend
+- 2308. Arrange Table by Gender
+- 2314. The First Day of the Maximum Recorded Degree in Each City
+- 2324. Product Sales Analysis IV
+- 2346. Compute the Rank as a Percentage
+- 2372. Calculate the Influence of Each Salesperson
+- 2388. Change Null Values in a Table to the Previous Value
+- 2394. Employees With Deductions
+- 2686. Immediate Food Delivery III
+- 2688. Find Active Users
+- 2738. Count Occurrences in Text
+- 2783. Flight Occupancy and Waitlist Analysis
+- 2820. Election Results
+- 2854. Rolling Average Steps
+- 2893. Calculate Orders Within Each Interval
+- 2922. Market Analysis III
+- 2978. Symmetric Coordinates
+- 2984. Find Peak Calling Hours for Each City
+- 2986. Find Third Transaction
+- 2988. Manager of the Largest Department
+- 2989. Class Performance
+- 2993. Friday Purchases I
+- 3050. Pizza Toppings Cost Analysis
+- 3054. Binary Tree Nodes
+- 3055. Top Percentile Fraud
+- 3056. Snaps Analysis
+- 3058. Friends With No Mutual Friends
+- 3087. Find Trending Hashtags
+- 3089. Find Bursty Behavior
+- 3118. Friday Purchase III
+- 3124. Find Longest Calls
+- 3126. Server Utilization Time
+- 3140. Consecutive Available Seats II
+- 3166. Calculate Parking Fees and Duration
+- 3182. Find Top Scoring Students
+- 3204. Bitwise User Permissions Analysis
+- 3220. Odd and Even Transactions
+- 3230. Customer Purchasing Behavior Analysis
+- 3252. Premier League Table Ranking II
+- 3262. Find Overlapping Shifts
+- 3278. Find Candidates for Data Scientist Position II
+- 3293. Calculate Product Final Price
+- 3308. Find Top Performing Driver
+- 3322. Premier League Table Ranking III
+- 3328. Find Cities in Each State II
+- 3338. Second Highest Salary II
+
+
+## Hard
+
+- 185. Department Top Three Salaries
+- 262. Trips and Users
+- 569. Median Employee Salary
+- 571. Find Median Given Frequency of Numbers
+- 579. Find Cumulative Salary of an Employee
+- 601. Human Traffic of Stadium
+- 615. Average Salary: Departments VS Company
+- 618. Students Report By Geography
+- 1097. Game Play Analysis V
+- 1127. User Purchase Platform
+- 1159. Market Analysis II
+- 1194. Tournament Winners
+- 1225. Report Contiguous Dates
+- 1336. Number of Transactions per Visit
+- 1369. Get the Second Most Recent Activity
+- 1384. Total Sales Amount by Year
+- 1412. Find the Quiet Students in All Exams
+- 1479. Sales by Day of the Week
+- 1635. Hopper Company Queries I
+- 1645. Hopper Company Queries II
+- 1651. Hopper Company Queries III
+- 1767. Find the Subtasks That Did Not Execute
+- 1892. Page Recommendations II
+- 1917. Leetcodify Friends Recommendations
+- 1919. Leetcodify Similar Friends
+- 1972. First and Last Call On the Same Day
+- 2004. The Number of Seniors and Juniors to Join the Company
+- 2010. The Number of Seniors and Juniors to Join the Company II
+- 2118. Build the Equation
+- 2153. The Number of Passengers in Each Bus II
+- 2173. Longest Winning Streak
+- 2199. Finding the Topic of Each Post
+- 2252. Dynamic Pivoting of a Table
+- 2253. Dynamic Unpivoting of a Table
+- 2362. Generate the Invoice
+- 2474. Customers With Strictly Increasing Purchases
+- 2494. Merge Overlapping Events in the Same Hall
+- 2701. Consecutive Transactions with Increasing Amounts
+- 2720. Popularity Percentage
+- 2752. Customers with Maximum Number of Transactions on Consecutive Days
+- 2793. Status of Flight Tickets
+- 2991. Top Three Wineries
+- 2994. Friday Purchases II
+- 2995. Viewers Turned Streamers
+- 3052. Maximize Items
+- 3057. Employees Project Allocation
+- 3060. User Activities within Time Bounds
+- 3061. Calculate Trapping Rain Water
+- 3103. Find Trending Hashtags II
+- 3156. Employee Task Duration and Concurrent Tasks
+- 3188. Find Top Scoring Students II
+- 3214. Year on Year Growth Rate
+- 3236. CEO Subordinate Hierarchy
+- 3268. Find Overlapping Shifts II
