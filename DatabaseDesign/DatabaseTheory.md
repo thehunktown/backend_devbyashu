@@ -1,23 +1,23 @@
-Write sql query to get the second highest salary among all employees?
-There are multiple ways to get the second highest salary among all employees.
-How can we retrieve alternate records from a table in oracle?
-Write sql query to find max salary and department name from each department.
-Write sql query to find records in table a that are not in table b without using not in operator.
-What is the result of following query?
-Write sql query to find employees that have same name and email.
-Write sql query to find max salary from each department.
-Write sql query to get the nth highest salary among all employees.
-How can you find 10 employees with odd number as employee id?
-Write sql query to get the names of employees whose date of birth is between 01/01/1990 to 31/12/2000.
-Write sql query to get the quarter from date.
-Write query to find employees with duplicate email.
-Write a query to find all employee whose name contains the word "rich", regardless of case.
-Is it safe to use rowid to locate a record in oracle sql queries?
-What is a pseudoпїЅolumn?
-What are the reasons for denormalizing the data?
-What is the feature in sql for writing if and else statements?
-What is the difference between delete and truncate in sql?
-What is the difference between ddl and dml commands in sql?
+- Write sql query to get the second highest salary among all employees?
+- There are multiple ways to get the second highest salary among all employees.
+- How can we retrieve alternate records from a table in oracle?
+- Write sql query to find max salary and department name from each department.
+- Write sql query to find records in table a that are not in table b without using not in operator.
+- What is the result of following query?
+- Write sql query to find employees that have same name and email.
+- Write sql query to find max salary from each department.
+- Write sql query to get the nth highest salary among all employees.
+- How can you find 10 employees with odd number as employee id?
+- Write sql query to get the names of employees whose date of birth is between 01/01/1990 to 31/12/2000.
+- Write sql query to get the quarter from date.
+- Write query to find employees with duplicate email.
+- Write a query to find all employee whose name contains the word "rich", regardless of case.
+- Is it safe to use rowid to locate a record in oracle sql queries?
+- What is a pseudoпїЅolumn?
+- What are the reasons for denormalizing the data?
+- What is the feature in sql for writing if and else statements?
+- What is the difference between delete and truncate in sql?
+- What is the difference between ddl and dml commands in sql?
 Why do we use escape characters in sql queries?
 What is the difference between primary key and unique key in sql?
 What is the difference between inner join and outer join in sql?
