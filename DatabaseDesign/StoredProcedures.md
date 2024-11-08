@@ -165,7 +165,8 @@ If they exist, it calls UpdateEmployeeSalary.
 If they don’t, it calls InsertNewEmployee.
 To execute this master procedure:
 ```
-EXEC ManageEmployee @EmployeeID = 102, @FirstName = 'Ashutosh', @LastName = 'Mishra', @Salary = 50000, @DepartmentID = 5; ```
+EXEC ManageEmployee @EmployeeID = 102, @FirstName = 'Ashutosh', @LastName = 'Mishra', @Salary = 50000, @DepartmentID = 5; 
+```
 
 Summary
 
