@@ -16,3 +16,27 @@
 17. XOR of  numbers in given range
 18. divide two integers without using division operators  
 */
+
+// Code 3:
+function swapNum(x, y){
+ x = x ^ y; 
+ y = x ^ y;
+ x = x ^ y;
+ return [{"x":x, "y":y}];
+}
+
+let x = 5;
+let y = 11;
+// console.log(swapNum(x, y));
+
+// code 4:
+function ithBitSet(num, ith){
+    console.log(num.toString(2));
+    let shiftedbit = num << ith;
+    console.log(shiftedbit);
+    let ans = (num & (1 << shiftedbit) != 0)? true: false;
+    return ans;
+}
+let num = 50;
+let ith = 2;
+console.log(ithBitSet(num, ith));
