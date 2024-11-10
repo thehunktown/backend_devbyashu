@@ -102,13 +102,61 @@ FROM
 
 ```
 - What is the difference between ddl and dml commands in sql?
+```
+DDL: CREATE, ALTER, DROP, TRUNCATE, RENAME	
+DML: SELECT, INSERT, UPDATE, DELETE, MERGE
+```
+
 - Why do we use escape characters in sql queries?
+```
+escape characters are used to handle special characters within strings and to format queries correctly, especially when dealing with values that might otherwise interfere with SQL syntax.
+```
 - What is the difference between primary key and unique key in sql?
+```
+| Feature                     | `PRIMARY KEY`                                       | `UNIQUE KEY`                                         |
+|-----------------------------|-----------------------------------------------------|------------------------------------------------------|
+| **Uniqueness**              | Ensures unique values across the column(s)          | Ensures unique values across the column(s)           |
+| **Nullability**             | Does not allow `NULL` values                        | Allows a single `NULL` value (in most RDBMS)         |
+| **Purpose**                 | Identifies each row uniquely and enforces entity integrity | Ensures uniqueness without serving as the primary row identifier |
+| **Index Type**              | Creates a clustered index by default (in most databases) | Creates a non-clustered index by default             |
+| **Allowed Per Table**       | Only one primary key per table                      | Multiple unique keys can be defined on a table       |
+| **Usage**                   | Typically used for the main identifier of each row | Used when uniqueness is required, but not as a primary identifier |
+
+```
 - What is the difference between inner join and outer join in sql?
+```
+| Feature                     | `INNER JOIN`                                         | `OUTER JOIN`                                            |
+|-----------------------------|------------------------------------------------------|
+```
 - What is the difference between left outer join and right outer join?
+```
+---------------------------------------------------------|
+| **Definition**              | Returns only the matching rows from both tables     | Returns matched rows and includes unmatched rows        |
+| **Types**                   | Only one type (`INNER JOIN`)                        | Three types: LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN |
+| **Returned Rows**           | Only rows where there is a match in both tables     | Rows from one or both tables, even if there's no match  |
+| **Use Case**                | Used when only interested in matched records        | Used when all records from one or both tables are needed |
+```
 - What is the datatype of rowid?
+```
+a hexadecimal
+```
 - What is the difference between where clause and having clause?
+```
+| Feature                     | `WHERE` Clause                                      | `HAVING` Clause                                      |
+|-----------------------------|-----------------------------------------------------|------------------------------------------------------|
+| **Purpose**                 | Filters rows before grouping (used to filter records before any aggregation is done) | Filters groups after the `GROUP BY` clause (used to filter aggregated data) |
+| **Used with**               | Used with individual rows (no aggregation)         | Used with groups created by `GROUP BY` clause        |
+| **Applies To**              | Columns in the tables (direct filtering of rows)   | Aggregate functions like `SUM()`, `COUNT()`, `AVG()`, etc. |
+| **Execution Order**         | Executed before the `GROUP BY` and `HAVING` clauses | Executed after the `GROUP BY` and aggregation        |
+| **Can Filter Aggregates?**  | No, only raw data (before aggregation)             | Yes, can filter based on aggregate functions         |
+| **Common Usage**            | Filtering specific rows based on column values     | Filtering data based on aggregated results, e.g., after grouping |
+
+```
+
 - How will you calculate the number of days between two dates in mysql?
+```
+
+```
 - What are the different types of triggers in mysql?
 - What are the differences between heap table and temporary table in mysql?
 - What is a heap table in mysql?
