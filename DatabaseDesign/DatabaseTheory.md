@@ -1,8 +1,25 @@
 - Write sql query to get the second highest salary among all employees?
+```
+SELECT MAX(salary) as seondHighest from employee where < (SELECT max(salary) from emplaoyee);
+```
+
 - There are multiple ways to get the second highest salary among all employees.
-- How can we retrieve alternate records from a table in oracle?
+```
+SELECT name, salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS dense_rank
+FROM employees;
+SELECT name, salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num
+FROM employees;
+```
+
 - Write sql query to find max salary and department name from each department.
+```
+SELECT department, MAX(salary) as maxsalary FROM employee_records GROUP BY department;
+```
+
 - Write sql query to find records in table a that are not in table b without using not in operator.
+```
+
+```
 - What is the result of following query?
 - Write sql query to find employees that have same name and email.
 - Write sql query to find max salary from each department.
