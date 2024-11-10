@@ -10,6 +10,8 @@ FROM employees;
 SELECT name, salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num
 FROM employees;
 ```
+# note - DENSE_RANK assigns a rank to each row within a partition, without leaving gaps in rank when there are ties. (1, 2, 2, 3.)
+# note - ROW_NUMBER assigns a unique sequential number to each row in a result set, starting at 1 for each partition.
 
 - Write sql query to find max salary and department name from each department.
 ```
@@ -18,22 +20,87 @@ SELECT department, MAX(salary) as maxsalary FROM employee_records GROUP BY depar
 
 - Write sql query to find records in table a that are not in table b without using not in operator.
 ```
+SELECT a.* FROM a LEFT JOIN b ON a.id = b.id WHERE b.id IS NULL;
+```
+# What is the result of following query?
+- Write sql query to find employees that have same name and email.
+```
+SELECT name, email FROM employee_record GROUP BY HAVING COUNT(*) > 1;
+SELECT * FROM employees WHERE (name, email) IN (SELECT name, email GROUP BY name, email HAVING count(*) > 1);
+```
+# note - HAVING filters groups based on a condition, usually with aggregate functions like COUNT, SUM, etc.
+- Write sql query to find max salary from each department.
+```
+SELECT department, MAX(salary) as maxsalary FROM employee_records GROUP BY department;
+```
+- Write sql query to get the nth highest salary among all employees.
+```
+WITH rankSalaries AS ( SELECT salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS rank FROM employee_records) SELECT salary FROM rankSalaries WHERE rank = n;
+```
+# note - Common Table Expressions (CTEs) are temporary result sets that can be referenced within 
+
+- How can you find 10 employees with odd number as employee id?
+```
+SELECT * FROM employee_records WHERE employee_id % 2 != 0 LIMIT 10;
+```
+
+- Write sql query to get the names of employees whose date of birth is between 01/01/1990 to 31/12/2000.
+```
+SELECT name FROM employee_records WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
+```
+
+- Write sql query to get the quarter from date.
+```
+SELECT EXTRACT(QUARTER FROM date) FROM employee_records;
+```
+# note - EXTRACT function is used to extract a specific part of a date/time value.
+
+- Write query to find employees with duplicate email.
+```
+SELECT name FROM employee_recods GROUP BY email BY HAVING COUNT(*) > 1;
+````
+- Write a query to find all employee whose name contains the word "rich", regardless of case.
+```
+SELECT * FROM employee_records WHERE name LIKE "%rich%";
+```
+
+- Is it safe to use rowid to locate a record in oracle sql queries?
+```
+No
+```
+
+- What are the reasons for denormalizing the data?
+```
+Reduces the need for JOIN operations, speeding up frequently accessed queries. that  Optimizes data retrieval for reporting, enhancing real-time analytics and reducing data processing time.
+```
+
+- What is the feature in sql for writing if and else statements?
+```
+SELECT 
+    column1,
+    column2,
+    CASE 
+        WHEN condition1 THEN result1
+        WHEN condition2 THEN result2
+        ELSE result_default
+    END AS alias_name
+FROM 
+    table_name;
 
 ```
-- What is the result of following query?
-- Write sql query to find employees that have same name and email.
-- Write sql query to find max salary from each department.
-- Write sql query to get the nth highest salary among all employees.
-- How can you find 10 employees with odd number as employee id?
-- Write sql query to get the names of employees whose date of birth is between 01/01/1990 to 31/12/2000.
-- Write sql query to get the quarter from date.
-- Write query to find employees with duplicate email.
-- Write a query to find all employee whose name contains the word "rich", regardless of case.
-- Is it safe to use rowid to locate a record in oracle sql queries?
-- What is a pseudoпїЅolumn?
-- What are the reasons for denormalizing the data?
-- What is the feature in sql for writing if and else statements?
 - What is the difference between delete and truncate in sql?
+```
+    | Feature                 | `DELETE`                                                | `TRUNCATE`                                               |
+|-------------------------|---------------------------------------------------------|----------------------------------------------------------|
+| **Purpose**             | Removes specific rows or all rows in a table            | Removes all rows from a table                            |
+| **Where Clause**        | Supports `WHERE` clause to filter rows                  | Does not support `WHERE`; deletes all rows               |
+| **Transaction Support** | DML operation; can be rolled back if within a transaction | DDL operation; cannot be rolled back (in some databases) unless wrapped in a transaction |
+| **Locking**             | Row-level locking                                       | Table-level locking                                      |
+| **Performance**         | Slower, especially for large tables, as it removes rows one by one | Faster, as it deallocates entire data pages              |
+| **Triggers**            | Activates any `DELETE` triggers defined                 | Does not activate `DELETE` triggers                      |
+| **Auto-increment Reset**| Keeps the current auto-increment counter value          | Resets the auto-increment counter in many systems        |
+
+```
 - What is the difference between ddl and dml commands in sql?
 - Why do we use escape characters in sql queries?
 - What is the difference between primary key and unique key in sql?
