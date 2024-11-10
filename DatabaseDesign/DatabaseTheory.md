@@ -155,10 +155,49 @@ a hexadecimal
 
 - How will you calculate the number of days between two dates in mysql?
 ```
+SELECT DATEDIFF('2024-11-11', '2024-10-01') AS days_difference;
+```
+
+- What are the different types of triggers in mysql?
+```
+CREATE TRIGGER before_insert_trigger
+BEFORE INSERT ON my_table
+FOR EACH ROW
+BEGIN
+   Your trigger logic here
+END;
+
+
+CREATE TRIGGER after_insert_trigger
+AFTER INSERT ON my_table
+FOR EACH ROW
+BEGIN
+  Your trigger logic here
+END;
+```
+# psql
+```
+CREATE TRIGGER trigger_name
+INSTEAD OF {INSERT | UPDATE | DELETE} 
+ON view_name
+FOR EACH ROW
+EXECUTE FUNCTION function_name();
+
+CREATE TRIGGER my_trigger
+AFTER INSERT ON my_table
+FOR EACH ROW
+EXECUTE FUNCTION my_function();
+
+CREATE TRIGGER my_trigger
+AFTER INSERT ON my_table
+FOR EACH ROW
+EXECUTE FUNCTION my_function();
+```
+
+- What are the differences between heap table and temporary table in mysql?
+```
 
 ```
-- What are the different types of triggers in mysql?
-- What are the differences between heap table and temporary table in mysql?
 - What is a heap table in mysql?
 - What is the difference between blob and text data type in mysql?
 - What will happen when auto increme on an integer column reaches max value in mysql?
