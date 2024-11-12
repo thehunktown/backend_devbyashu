@@ -196,11 +196,34 @@ EXECUTE FUNCTION my_function();
 
 - What are the differences between heap table and temporary table in mysql?
 ```
+| Feature                  | **Heap Table**                        | **Temporary Table**                        |
+|--------------------------|---------------------------------------|--------------------------------------------|
+| **Storage Engine**        | MEMORY (Heap storage engine)          | Default is InnoDB, but can be MEMORY       |
+| **Persistence**           | Data is lost when MySQL restarts      | Data is lost at the end of the session or when the connection is closed |
+| **Scope**                 | Exists as long as the table is in use (until the session or server restarts) | Exists only for the session or until explicitly dropped |
+| **Data Types Supported**  | Limited to fixed-length types (`CHAR`, `INT`, etc.) | Supports variable-length types like `TEXT`, `VARCHAR`, `BLOB` |
+| **Performance**           | Faster data access (in-memory)       | Performance can be faster when stored in memory, but can degrade if spilled to disk |
+| **Automatic Cleanup**     | No automatic cleanup; manual drop needed | Automatically dropped when the session ends |
+| **Disk Usage**            | No disk usage; completely in memory   | May spill to disk if it exceeds memory limits |
+| **Use Case**              | For quick operations that don’t require persistence | For temporary storage of data during a session (often for complex queries or intermediate steps) |
+```
+- What is the difference between blob and text data type in mysql?
+```
+| Feature         | BLOB                                            | TEXT                                           |
+|-----------------|-------------------------------------------------|------------------------------------------------|
+| **Purpose**     | Stores binary data (e.g., images, audio)        | Stores text data (e.g., articles, descriptions) |
+| **Character Set** | No character set, stores raw binary data       | Has a character set, stores human-readable text |
+| **Data Type**   | Binary data (non-textual)                       | Textual data (human-readable)                   |
+| **Use Case**    | For storing non-textual, binary files like images, videos | For storing long strings of textual data like descriptions, paragraphs |
+| **Storage Size**| Maximum size up to 4 GB (LONGBLOB)              | Maximum size up to 4 GB (LONGTEXT)             |
+| **Encoding**    | Data is not encoded or decoded in terms of characters | Data is encoded and decoded using the specified character set (e.g., UTF-8) |
+| **Examples**    | Image files, audio files, video files           | Articles, blog posts, product descriptions     |
 
 ```
-- What is a heap table in mysql?
-- What is the difference between blob and text data type in mysql?
-- What will happen when auto increme on an integer column reaches max value in mysql?
+- What will happen when auto increse on an integer column reaches max value in mysql?
+```
+
+```
 - What are the advantages of mysql as compared with oracle db?
 - What are the disadvantages of mysql?
 - What is the difference between char and varchar datatype in mysql?

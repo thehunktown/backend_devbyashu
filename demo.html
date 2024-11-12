@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prospect Details - Leapswitch Networks Pvt. Ltd.</title>
+    <?php include("base-url.php"); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leapswitch Networks Pvt. Ltd. - Prospect Details">
+    <meta name="keywords" content="Leapswitch Networks Pvt. Ltd." />
+    <meta name="author" content="Leapswitch Networks">
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktDk4y1r3qq6t9a91lsnaG3ooV6V5q1DIEN1hRT7V" crossorigin="anonymous">
+
+    <style>
+        /* Centering the form */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            height: 80%;
+        }
+
+        /* Form styling */
+        .prospectDetails-form {
+            align-items: center;
+            max-width: 40%;
+            width: 100%;
+            max-height: 80%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .prospectDetails-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        .row-group {
+            display: flex;
+            justify-content: start;
+            gap: 20px;
+            text-align: center;
+
+        }
+
+        .form-nav-group {
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .form-group-full {
+            width: 100%;
+        }
+
+        .form-nav-group {
+            gap: 1rem;
+            /* Adjusts space between radio button groups */
+        }
+
+
+        .company-group,
+        .address-row {
+            display: flex;
+            justify-content: start;
+            gap: 20px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <?php include("header.php"); ?>
+    <!-- Page Container -->
+    <div class="form-container" id="ls-sign">
+        <div class="prospectDetails-form card p-4 h-auto mb-5">
+            <h2>PROSPECT DETAILS</h2>
+            <!-- <form id="signupForm" action="signup_process.php" method="POST" novalidate> -->
+            <form id="prospectDetailsForm" novalidate>
+                <div class="form-nav-group d-flex justify-content-center gap-2 mb-3" style="gap: 2%;">
+                    <div class="d-flex align-items-center">
+                        <input type="radio" id="individual" name="choice" value="Individual" class="radio-inline me-2" checked />
+                        <label for="individual" class="mb-0">Individual</label>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <input type="radio" id="business" name="choice" value="Business" class="radio-inline me-2" />
+                        <label for="business" class="mb-0">Business</label>
+                    </div>
+                </div>
+                
+
+                <div id="company-fields" style="display: none;">
+                    <div class="form-control mb-2">
+                        <label for="company-name" class="form-label">Company Name</label>
+                        <input type="text" id="company-name"  name="company_name" placeholder="Company Name" />
+                    </div>
+                    <div class="form-control mb-2">
+                        <label for="company-type" class="form-label">Company Type</label>
+                        <select id="company-type" name="company_type" class="form-select" required>
+                            <option value="Firm">Firm</option>
+                            <option value="LLP">LLP</option>
+                            <option value="Proprietary">Proprietary</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div id="gstIn" class="company-group">
+                    <div class="form-group">
+                        <label for="gst">GST</label>
+                        <input type="checkbox" id="gst" name="gst" value="gst" />
+                    </div>
+                    <div class="form-group" id="gstin-field" style="display: none;">
+                        <label for="gstin">GSTIN</label>
+                        <input type="text" id="gstin" name="gstin" placeholder="Enter GSTIN" pattern="\d{10}">
+                    </div>
+                </div>
+
+
+                <!-- Address Fields -->
+
+                <label for="address">ADDRESS</label>
+                <div class="form-group-full mb-3">
+                    <label for="line1" class="form-label">Line 1</label>
+                    <input type="text" id="line1" name="line1" class="form-control" />
+                </div>
+                <div class="form-group-full mb-3">
+                    <label for="line2" class="form-label">Line 2</label>
+                    <input type="text" id="line2" name="line2" class="form-control" />
+                </div>
+
+                <!-- City, State/Province in one row -->
+                <div class="address-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" />
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state" name="state" />
+                    </div>
+                </div>
+
+                <!-- Country and Postal Code in one row -->
+                <div class="address-row">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" />
+                    </div>
+                    <div class="form-group">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" id="postal-code" name="postal_code" />
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div id="terms" style="display: flex;">
+                        <input type="checkbox" id="terms-condition" name="terms_condition">
+                        <label for="terms-condition"> <span> Terms and Condition</span> accepted.</label>
+                    </div>
+                </div>
+                <button type="submit"
+                    style="width: 100%; padding: 10px; background-color: #f44336; color: white; border: none; border-radius: 4px; font-size: 16px;">Next</button>
+            </form>
+        </div>
+        <?php include("footer.php"); ?>
+
+
+        <script>
+            // Function to get query parameter value by name
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            // form nav action.
+            const individualRadio = document.getElementById("individual");
+            const businessRadio = document.getElementById("business");
+            const companyFields = document.getElementById("company-fields");
+            individualRadio.addEventListener("change", toggleCompanyFields);
+            businessRadio.addEventListener("change", toggleCompanyFields);
+            function toggleCompanyFields() {
+                if (businessRadio.checked) {
+                    companyFields.style.display = "block";
+                } else {
+                    companyFields.style.display = "none";
+                }
+            }
+            toggleCompanyFields();
+
+
+            // gstIn field action
+            document.addEventListener("DOMContentLoaded", function () {
+                const gstCheckbox = document.getElementById("gst");
+                const gstinField = document.getElementById("gstin-field");
+
+                function toggleGstinField() {
+                    gstinField.style.display = gstCheckbox.checked ? "block" : "none";
+                }
+                toggleGstinField();
+                gstCheckbox.addEventListener("change", toggleGstinField);
+            });
+
+            // Form submission handler
+            document.getElementById("prospectDetailsForm").addEventListener("submit", function (event) {
+                const uuid = getQueryParam('uuid');
+                console.log("UUID:", uuid);
+                event.preventDefault();
+                const gstChecked = document.getElementById("gst").checked;
+                let gstinNum = null;
+                if (gstChecked) {
+                    gstinNum = document.getElementById("gstin").value;
+                }
+                const formData = {
+                    companyName: document.getElementById("company-name").value,
+                    companyType: document.getElementById("company-type").value,
+                    businessType: (document.getElementById("individual").checked) ? "Individual" : "Business",
+                    gstChecked: gstChecked,
+                    gstinNum: gstinNum,
+                    street: document.getElementById("line1").value + document.getElementById("line2").value,
+                    city: document.getElementById("city").value,
+                    state: document.getElementById("state").value,
+                    country: document.getElementById("country").value,
+                    pinCode: document.getElementById("postal-code").value,
+                    termAndCondition: document.getElementById("terms-condition").checked,
+                };
+                const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAyMzU0MS1kMDk3LTQ4M2ItODkxMC0wOTU1ODk1Y2Y1YmQiLCJyb2xlIjp7ImlkIjoiYTMxY2UwZjMtNTJiYy00MTIxLWFkZmYtMmNiMjI2ODM2NTZmIiwiY3JlYXRlZEF0IjoiMjAyNC0xMS0wOFQwMDo1Mzo1NC43NzJaIiwidXBkYXRlZEF0IjoiMjAyNC0xMS0wOFQwMDo1Mzo1NC43NzJaIiwiZGVsZXRlZEF0IjpudWxsLCJuYW1lIjoiU3VwZXIgdXNlciIsInZhbHVlIjoic3VwZXJ1c2VyIiwiZGVzY3JpcHRpb24iOiJDYW4gcGVyZm9ybSBhbnkgdGFzayIsInBlcm1pc3Npb25zIjp7fSwibGFzdFBlcm1pc3Npb25VcGRhdGVkIjpudWxsLCJfdGVtcFBlcm1pc3Npb25zIjoie30ifSwiaWF0IjoxNzMxMDU3NDQ3LCJleHAiOjE3MzEwNTc1NDd9.4VKQF1r256zPU9WOnk6IyfKp1dVn6eWlxe0PEKCDMdo';
+                try {
+                    fetch(`http://localhost:5000/api/v1/prospect/update?id=${uuid}`, {
+                        method: "POST",
+                        headers: {
+                            'Authorization': `Bearer ${jwtToken}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert("Form submitted successfully!");
+                            console.log("Response:", data);
+                        })
+                        .catch(error => {
+                            alert("An error occurred.");
+                            console.error("Error:", error);
+                        });
+                } catch (e) {
+                    alert("Error: " + e.message);
+                }
+            });
+
+
+        </script>
